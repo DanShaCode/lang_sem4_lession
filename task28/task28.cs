@@ -1,11 +1,13 @@
 ﻿// Принимаем на вход число N
 // Выдаем произведение чисел от 1 до N
 
+Console.WriteLine("Данная программа выводит произведение чисел от 1 до N");
+Console.Write("Введите число (от 0 до 33): ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-void SplitToArray(int number)
+void multiNum(int number)
 {
-    if (num > 0 && num < 10)
+    if (num > 0 && num < 33)
     {
         int count = 1;
         int multiNumOne = 1;
@@ -16,23 +18,13 @@ void SplitToArray(int number)
             count++;
             index++;
         }
-        Console.WriteLine(multiNumOne);
+        Console.WriteLine("Произведение чисел = " + multiNumOne);
     }
-    if (num > 9 && num < 100)
+    else
     {
-    int num1 = num / 10;
-    int num2 = num % 10;
-    int res = num1 * num2;
-    Console.WriteLine(res);
+        Console.WriteLine("Ошибка ввода. Введите число от 0 до 33.");
     }
-    if (num > 99 && num < 1000)
-{
-    int num1 = num / 100;
-    int num2 = (num / 10) % 10;
-    int num3 = num % 10;
-    int res = num1 * num2 * num3;
-    Console.WriteLine(res);
-}
+   
 }
 
-SplitToArray(num);
+multiNum(num);
